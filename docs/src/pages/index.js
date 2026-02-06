@@ -11,7 +11,7 @@ import LatestRelease from '@site/src/components/LatestRelease';
 import TypewriterTextarea from '@site/src/components/TypewriterTextarea';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header
       className={clsx('hero hero--primary the-banner', styles.heroBanner)}
@@ -33,13 +33,12 @@ function HomepageHeader() {
             textContent='Hello there! I’m a handy little Java library that helps you talk to an Ollama server — nice and easy.'
             typingSpeed={20}
             pauseBetweenSentences={1200}
-            height='130px'
             width='100%'
             align='center'
           />
         </div>
         <div className={styles.buttons} >
-          <Link className="button button--secondary button--lg get-started" to="/intro" style={{ marginTop:'2rem' }}>
+          <Link className="button button--secondary button--lg get-started" to="/intro" style={{ marginTop: '2rem' }}>
             Get Started
           </Link>
         </div>
@@ -52,7 +51,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}

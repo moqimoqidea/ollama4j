@@ -51,21 +51,21 @@ const TypewriterTextarea = ({
     <div
       style={{
         width: typeof width === 'number' ? `${width}px` : width,
-        height: height,
         padding: '1rem',
         fontFamily: 'monospace',
         fontSize: '1rem',
         backgroundColor: '#f4f4f4',
         border: '1px solid #ccc',
         textAlign: align,
-        resize: 'none',
         whiteSpace: 'pre-wrap',
         color: 'black',
-        overflow: 'auto',
         ...style,
       }}
     >
-      {displayedText}
+      <span>{fullText.slice(0, charIndex)}</span>
+      <span style={{ opacity: 0 }} aria-hidden="true">
+        {fullText.slice(charIndex)}
+      </span>
     </div>
   );
 };
